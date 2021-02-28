@@ -12,5 +12,6 @@ all:
 	gcc -c main.c -lGL `sdl-config --cflags --libs` -o main -I /usr/lib/x86_64-linux-gnu
 
 clean:
-	rm -f *~
-	rm -f *#*
+	find . iname "*~" -exec rm -f {} \;
+	find . iname "*#*" -exec rm -f {} \; 
+
